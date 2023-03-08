@@ -24,7 +24,8 @@
     "clean": "python script/clean.py",
     "package": "python script/package.py",
     "template": "python script/template.py -b",
-    "restore": "python script/template.py -r"
+    "restore": "python script/template.py -r",
+    "helpdoc": "jsdoc2vitepress start"
   },
   "repository": "terwer/{{name}}",
   "homepage": "https://terwer.space",

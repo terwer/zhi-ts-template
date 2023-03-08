@@ -1,10 +1,3 @@
-#!/usr/bin/env node --experimental-specifier-resolution=node
-
-/**
- * @packageDocumentation
- * This is a hello world
- */
-
 /**
  * Hello
  */
