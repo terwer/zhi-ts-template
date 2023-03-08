@@ -3,10 +3,20 @@
   "version": "0.0.1",
   "description": "{{description}}",
   "type": "module",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "typings": "./typings/index.d.ts",
   "scripts": {
-    "dev": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
-    "build": "tsc",
-    "start": "node --experimental-specifier-resolution=node lib/index.js",
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "eslint --ext .ts .",
     "lint:fix": "eslint --fix --ext .ts .",
     "prettier": "prettier --write ."
@@ -19,10 +29,14 @@
     "@types/node": "16",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "@vitest/coverage-c8": "^0.29.2",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
     "prettier": "^2.8.4",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "vite-plugin-dts": "^2.1.0",
+    "vitest": "^0.29.2"
   }
 }

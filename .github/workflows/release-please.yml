@@ -13,26 +13,25 @@ jobs:
           release-type: node
           package-name: release-please-action
 
-      # Uncomment code to allow auto publish package to npm
-#      # Checkout
-#      - uses: actions/checkout@v3
-#        if: ${{ steps.release.outputs.release_created }}
-#      # Setup node
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version: 16
-#          registry-url: 'https://registry.npmjs.org'
-#        if: ${{ steps.release.outputs.release_created }}
-#      # Setup pnpm
-#      - uses: pnpm/action-setup@v2
-#        with:
-#          version: 7.29.0
-#        if: ${{ steps.release.outputs.release_created }}
-#      # Install dependencies
-#      - run: pnpm install && pnpm build
-#        if: ${{ steps.release.outputs.release_created }}
-#      # Publish to npm
-#      - run: npm publish
-#        env:
-#          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-#        if: ${{ steps.release.outputs.release_created }}
+      # Checkout
+      - uses: actions/checkout@v3
+        if: ${{ steps.release.outputs.release_created }}
+      # Setup node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+        if: ${{ steps.release.outputs.release_created }}
+      # Setup pnpm
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.29.0
+        if: ${{ steps.release.outputs.release_created }}
+      # Install dependencies
+      - run: pnpm install && pnpm build
+        if: ${{ steps.release.outputs.release_created }}
+      # Publish to npm
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
