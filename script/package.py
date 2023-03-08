@@ -9,6 +9,8 @@ if __name__ == "__main__":
     # 切换工作空间
     scriptutils.switch_workdir()
 
+    os.system("pnpm template")
+    os.system("pnpm install")
     os.system("pnpm build")
     os.system("pnpm typings")
     os.system("pnpm clean")

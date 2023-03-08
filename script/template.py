@@ -15,7 +15,10 @@ def parse_json(filename):
     data = scriptutils.read_json_file(filename)
 
     # 修改 JSON 文件中的属性
-    data.name = "terwer"
+    data["name"] = "terwer"
+    data["description"] = "ts template lib for test"
+    data["repository"] = "terwer/zhi-ts-template"
+    data["author"] = "terwer"
 
     # 将修改后的 JSON 写回到文件中
     scriptutils.write_json_file(filename, data)

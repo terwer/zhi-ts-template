@@ -28,7 +28,7 @@ jobs:
           version: 7.29.0
         if: ${{ steps.release.outputs.release_created }}
       # Install dependencies
-      - run: pnpm install && pnpm build
+      - run: pnpm package
         if: ${{ steps.release.outputs.release_created }}
       # Publish to npm
       - run: npm publish
