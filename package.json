@@ -1,14 +1,8 @@
 {
-  "name": "ts-vite-lib",
+  "name": "{{name}}",
   "version": "0.0.1",
-  "description": "ts template for vite lib",
+  "description": "{{description}}",
   "type": "module",
-  "files": [
-    "lib",
-    "typings",
-    "etc",
-    "doc"
-  ],
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "exports": {
@@ -28,11 +22,13 @@
     "prettier": "prettier --write .",
     "typings": "python script/typings.py",
     "clean": "python script/clean.py",
-    "package": "python script/package.py"
+    "package": "python script/package.py",
+    "template": "python script/template.py -b",
+    "restore": "python script/template.py -r"
   },
-  "repository": "terwer/ts-vite-lib",
+  "repository": "terwer/{{name}}",
   "homepage": "https://terwer.space",
-  "author": "terwer",
+  "author": "{{author}}",
   "license": "MIT",
   "devDependencies": {
     "@microsoft/api-documenter": "^7.21.5",
