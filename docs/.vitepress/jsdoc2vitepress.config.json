@@ -2,7 +2,7 @@
   "markdownDirs": [
     {
       "root": "./src",
-      "output": "./docs/02.帮助文档",
+      "output": "./docs/01.帮助文档",
       "ingoreList": []
     }
   ]

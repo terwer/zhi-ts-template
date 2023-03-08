@@ -1,7 +1,7 @@
 {
-  "name": "{{name}}",
+  "name": "terwer",
   "version": "0.0.1",
-  "description": "{{description}}",
+  "description": "ts template lib for test",
   "type": "module",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
@@ -27,9 +27,9 @@
     "restore": "python script/template.py -r",
     "helpdoc": "jsdoc2vitepress start"
   },
-  "repository": "terwer/{{name}}",
+  "repository": "terwer/zhi-ts-template",
   "homepage": "https://terwer.space",
-  "author": "{{author}}",
+  "author": "terwer",
   "license": "MIT",
   "devDependencies": {
     "@microsoft/api-documenter": "^7.21.5",

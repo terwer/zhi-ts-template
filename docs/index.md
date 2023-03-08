@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /01.概述/快速开始
+      link: /01.帮助文档/
     - theme: alt
       text: View on Git
       link: 
