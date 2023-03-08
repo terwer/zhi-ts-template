@@ -4,3 +4,16 @@
 # Node
 node_modules
 lib
+typings
+
+# Docs
+etc
+doc
+temp
+
+# scripts
+script/__pycache__
+script/venv
+
+# Vite
+coverage

@@ -1,2 +1,3 @@
 # zhi-ts-template
-TypeScript project template for zhi-cli
+
+TypeScript project template for zhi-lib

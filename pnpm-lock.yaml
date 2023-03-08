@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@microsoft/api-documenter': ^7.21.5
+  '@microsoft/api-extractor': ^7.34.4
   '@types/node': '16'
   '@typescript-eslint/eslint-plugin': ^5.54.1
   '@typescript-eslint/parser': ^5.54.1
@@ -15,6 +17,8 @@ specifiers:
   vitest: ^0.29.2
 
 devDependencies:
+  '@microsoft/api-documenter': 7.21.5_@types+node@16.18.14
+  '@microsoft/api-extractor': 7.34.4_@types+node@16.18.14
   '@types/node': 16.18.14
   '@typescript-eslint/eslint-plugin': 5.54.1_mlk7dnz565t663n4razh6a6v6i
   '@typescript-eslint/parser': 5.54.1_ycpbpc6yetojsgtrx3mwntkhsu
@@ -334,6 +338,21 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@microsoft/api-documenter/7.21.5_@types+node@16.18.14:
+    resolution: {integrity: sha512-RTYtqbNqlPvDSqYV2ZCNWSajSieXG58mG1w4MFkHdHhxhWbC9FHqQk7MwIMUKBQBNagW3rE/11Jv5cV0TXuW2Q==}
+    hasBin: true
+    dependencies:
+      '@microsoft/api-extractor-model': 7.26.4_@types+node@16.18.14
+      '@microsoft/tsdoc': 0.14.2
+      '@rushstack/node-core-library': 3.55.2_@types+node@16.18.14
+      '@rushstack/ts-command-line': 4.13.2
+      colors: 1.2.5
+      js-yaml: 3.13.1
+      resolve: 1.22.1
+    transitivePeerDependencies:
+      - '@types/node'
     dev: true
 
   /@microsoft/api-extractor-model/7.26.4_@types+node@16.18.14:
@@ -1102,6 +1121,12 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
+  /esprima/4.0.1:
+    resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
+    engines: {node: '>=4'}
+    hasBin: true
+    dev: true
+
   /esquery/1.5.0:
     resolution: {integrity: sha512-YQLXUplAwJgCydQ78IMJywZCceoqk1oH01OERdSAJc/7U2AylwjhSCLDEtqwg811idIS/9fIU5GjG73IgjKMVg==}
     engines: {node: '>=0.10'}
@@ -1421,6 +1446,14 @@ packages:
 
   /js-sdsl/4.3.0:
     resolution: {integrity: sha512-mifzlm2+5nZ+lEcLJMoBK0/IH/bDg8XnJfd/Wq6IP+xoCjLZsTOnV2QpxlVbX9bMnkl5PdEjNtBJ9Cj1NjifhQ==}
+    dev: true
+
+  /js-yaml/3.13.1:
+    resolution: {integrity: sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==}
+    hasBin: true
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
     dev: true
 
   /js-yaml/4.1.0:

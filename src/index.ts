@@ -1,3 +1,18 @@
 #!/usr/bin/env node --experimental-specifier-resolution=node
-const msg: string = 'Hello World'
-console.log(msg)
+
+/**
+ * @packageDocumentation
+ * This is a hello world
+ */
+
+/**
+ * Hello
+ */
+class Hello {
+  private hello() {
+    const msg = "Hello World"
+    console.log(msg)
+  }
+}
+
+export default Hello
