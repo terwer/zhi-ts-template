@@ -3,7 +3,7 @@ export default {
   title: "xxx", // 设置网站标题
   description: "xxx xxx",
   base: "/", // 设置站点根路径
-  outDir: "./dist", // 设置输出目录
+  outDir: ".vitepress/dist", // 设置输出目录
   repo: "", // 添加 git 链接
   markdown: {
     toc: { includeLevel: [2, 3] },
