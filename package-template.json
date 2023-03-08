@@ -40,6 +40,7 @@
     "@vitest/coverage-c8": "^0.29.2",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
+    "jsdoc-babel": "^0.5.0",
     "jsdoc2vitepress": "^1.0.5",
     "prettier": "^2.8.4",
     "ts-node": "^10.9.1",
