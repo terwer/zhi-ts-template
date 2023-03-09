@@ -8,8 +8,8 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /helpdoc/
+      link: /doc/
     - theme: alt
       text: View on Git
-      link: 
+      link:
 ---

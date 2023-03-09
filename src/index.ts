@@ -1,5 +1,12 @@
 /**
+ * @packageDocumentation
+ * Hello World
+ */
+
+/**
  * Hello
+ *
+ * @public
  */
 class Hello {
   private hello() {

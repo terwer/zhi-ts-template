@@ -25,7 +25,9 @@
     "package": "python script/package.py",
     "template": "python script/template.py -b",
     "restore": "python script/template.py -r",
-    "helpdoc": "jsdoc2vitepress start"
+    "helpdoc": "jsdoc2vitepress start",
+    "vitepress:dev": "vitepress dev docs",
+    "vitepress:build": "vitepress build docs"
   },
   "repository": "terwer/{{name}}",
   "homepage": "https://terwer.space",

@@ -9,7 +9,6 @@ vite*.mjs
 
 # Docs
 etc
-doc
 temp
 
 # scripts

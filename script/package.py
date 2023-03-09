@@ -13,6 +13,11 @@ if __name__ == "__main__":
     os.system("pnpm install")
     os.system("pnpm build")
     os.system("pnpm typings")
+
+    # 文档
+    scriptutils.cp_folder("./doc", "docs/doc", True)
+    scriptutils.rm_folder("./doc")
+
     os.system("pnpm clean")
     os.system("pnpm coverage ")
     print("package finished.")
