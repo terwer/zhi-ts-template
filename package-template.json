@@ -22,6 +22,7 @@
     "prettier": "prettier --write .",
     "typings": "python script/typings.py",
     "clean": "python script/clean.py",
+    "ci": "python script/ci.py",
     "package": "python script/package.py",
     "template": "python script/template.py -b",
     "restore": "python script/template.py -r",

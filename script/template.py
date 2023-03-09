@@ -1,4 +1,5 @@
 import argparse
+import os.path
 
 import scriptutils
 
@@ -45,8 +46,11 @@ if __name__ == "__main__":
 
     # 还原
     if args.restore:
-        scriptutils.rm_file("./package.json")
-        scriptutils.cp_file("./package-template.json", "./package.json")
-        print("package.json restored.")
+        if os.path.exists("./package-template.json"):
+            scriptutils.rm_file("./package.json")
+            scriptutils.cp_file("./package-template.json", "./package.json")
+            print("package.json restored.")
+        else:
+            print("template not exist, ignored.")
 
-    print("template change finished.")
+    print("template handle finished.")
