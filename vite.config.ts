@@ -19,5 +19,10 @@ export default defineConfig({
       formats: ["es", "cjs"],
       name: "index",
     },
+    rollupOptions: {
+      output: {
+        exports: "named",
+      },
+    },
   },
 })
