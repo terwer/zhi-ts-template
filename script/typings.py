@@ -1,3 +1,5 @@
+# coding=UTF-8
+
 # Copyright (c) 2022 Terwer Authors. All Rights Reserved.
 # @author terwer on 2023/3/7
 # ========================================================
@@ -12,10 +14,10 @@ if __name__ == "__main__":
 
     scriptutils.mkdir("./temp")
     scriptutils.mkdir("./etc")
-    scriptutils.mkdir("./doc")
     scriptutils.mkdir("./typings")
 
     # os.system("api-extractor run --local --diagnostics")
-    os.system("api-extractor run --local")
-    os.system("api-documenter markdown -i temp -o doc")
+    os.system("pnpm vitepress:api")
+    os.system("pnpm vitepress:prepare")
+
     print("compile finished.")

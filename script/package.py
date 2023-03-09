@@ -1,3 +1,5 @@
+# coding=UTF-8
+
 # Copyright (c) 2022 Landray Authors. All Rights Reserved.
 # @author terwer on 2023/3/8
 # ========================================================
@@ -12,10 +14,6 @@ if __name__ == "__main__":
     os.system("pnpm ci")
     os.system("pnpm typings")
 
-    # 文档
-    scriptutils.cp_folder("./doc", "docs/doc", True)
-    scriptutils.rm_folder("./doc")
-
     os.system("pnpm clean")
-    os.system("pnpm coverage ")
+    os.system("pnpm coverage")
     print("package finished.")
