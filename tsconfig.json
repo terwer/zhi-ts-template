@@ -109,6 +109,9 @@
     "sourceMap": true,
     "outDir": "./lib"
   },
+  "paths": {
+    "~/*": ["./*"]
+  },
   "include": [".eslintrc.cjs", "./**/*.ts", "*.ts"],
   "exclude": [".github", "node_modules", "lib/**/*"]
 }
