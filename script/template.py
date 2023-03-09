@@ -41,8 +41,11 @@ if __name__ == "__main__":
 
     # 备份
     if args.backup:
-        parse_json(cwd + "package.json")
-        print("package.json changed for test and ci only.")
+        if os.path.exists("./package-template.json"):
+            parse_json(cwd + "package.json")
+            print("package.json changed for test and ci only.")
+        else:
+            print("template not exist, ignored.")
 
     # 还原
     if args.restore:
