@@ -19,6 +19,7 @@ script/venv
 # Vite
 coverage
 .env
+*.local
 
 # Vercel
 .vercel
