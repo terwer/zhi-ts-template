@@ -19,6 +19,9 @@ if __name__ == "__main__":
     scriptutils.rm_files("./src/**/*.js")
     scriptutils.rm_files("./src/*.js")
 
+    if scriptutils.is_dir_empty("./lib/src"):
+        scriptutils.rm_folder("./lib/src")
+
     # lib
     scriptutils.rm_files("./lib/**/*.d.ts")
     scriptutils.rm_files("./lib/*.d.ts")

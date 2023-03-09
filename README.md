@@ -21,4 +21,3 @@ pnpm package
 ```bash
 pnpm vitepress:dev
 ```
-

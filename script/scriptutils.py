@@ -204,3 +204,10 @@ def get_filename_from_time():
     # 使用strftime函数把时间转换成想要的格式
     filename = time.strftime("%Y%m%d%H%M%S", now_time)  # 输出结果为：20210126095555
     return filename
+
+
+def is_dir_empty(folder_path):
+    if not os.listdir(folder_path):
+        return True
+    else:
+        return False

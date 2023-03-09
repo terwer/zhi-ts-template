@@ -2,11 +2,7 @@
   "name": "{{name}}",
   "version": "0.0.1",
   "description": "{{description}}",
-  "files": [
-    "lib",
-    "typings",
-    "docs"
-  ],
+  "files": ["lib", "typings", "docs"],
   "type": "module",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
