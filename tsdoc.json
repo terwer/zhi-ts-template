@@ -19,6 +19,11 @@
       "allowMultiple": false
     },
     {
+      "tagName": "@private",
+      "syntaxKind": "block",
+      "allowMultiple": false
+    },
+    {
       "tagName": "@protected",
       "syntaxKind": "block",
       "allowMultiple": false
@@ -30,6 +35,7 @@
     // be reported saying that the tag is unsupported.)
     "@author": true,
     "@since": true,
+    "@private": true,
     "@protected": true
   }
 }
