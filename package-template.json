@@ -35,10 +35,6 @@
     "vitepress:dev": "vitepress dev docs",
     "vitepress:build": "vitepress build docs"
   },
-  "repository": "terwer/{{name}}",
-  "homepage": "https://terwer.space",
-  "author": "{{author}}",
-  "license": "MIT",
   "devDependencies": {
     "@microsoft/api-documenter": "^7.21.5",
     "@microsoft/api-extractor": "^7.34.4",
@@ -65,5 +61,12 @@
     "vitepress-plugin-autobar": "^1.0.8",
     "vitest": "^0.29.2",
     "vue-eslint-parser": "^9.1.0"
-  }
+  },
+  "dependencies": {
+    "zhi-log": "^1.5.5"
+  },
+  "repository": "terwer/{{name}}",
+  "homepage": "https://terwer.space",
+  "author": "{{author}}",
+  "license": "MIT"
 }
