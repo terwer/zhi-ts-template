@@ -68,5 +68,5 @@
   "repository": "terwer/{{name}}",
   "homepage": "https://terwer.space",
   "author": "{{author}}",
-  "license": "MIT"
+  "license": "GPL"
 }

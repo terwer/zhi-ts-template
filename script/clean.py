@@ -1,4 +1,4 @@
-# Copyright (c) 2022 Landray Authors. All Rights Reserved.
+# Copyright (c) 2022 Terwer Authors. All Rights Reserved.
 # @author terwer on 2023/3/8
 # ========================================================
 import os
