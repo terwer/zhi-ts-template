@@ -1,9 +1,10 @@
 import path from "path"
 import { defineConfig } from "vite"
 import dts from "vite-plugin-dts"
+import eslint from "vite-plugin-eslint"
 
 export default defineConfig({
-  plugins: [dts()],
+  plugins: [dts(), eslint()],
   resolve: {
     alias: [
       {

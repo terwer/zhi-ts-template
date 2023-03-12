@@ -1,14 +1,9 @@
 # platform
-.github
-.husky
-.settings
-.vercel
-.vscode
+.nuxt
+.output
 
 # Ignore artifacts:
-build
-coverage
-lib
+dist
 node_modules
 
 # Ignore all HTML files:

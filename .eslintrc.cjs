@@ -7,7 +7,7 @@ module.exports = {
     es2021: true,
   },
 
-  parser: "@typescript-eslint/parser",
+  parser: "vue-eslint-parser",
 
   parserOptions: {
     ecmaVersion: 12,
@@ -15,21 +15,17 @@ module.exports = {
     tsconfigRootDir: __dirname,
     parser: "@typescript-eslint/parser",
     project: ["./tsconfig.json"],
+    extraFileExtensions: [".vue"],
   },
 
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "prettier"],
 
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-  ],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
 
   rules: {
     // Note: you must disable the base rule as it can report incorrect errors
     semi: "off",
     quotes: "off",
-    "@typescript-eslint/semi": ["error", "never"],
-    "@typescript-eslint/quotes": ["error", "double"],
+    "prettier/prettier": "error",
   },
 }
