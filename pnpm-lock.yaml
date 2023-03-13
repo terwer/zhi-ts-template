@@ -26,10 +26,10 @@ specifiers:
   vitepress-plugin-autobar: ^1.0.8
   vitest: ^0.29.2
   vue-eslint-parser: ^9.1.0
-  zhi-log: ^1.5.5
+  zhi-sdk: ^1.0.8
 
 dependencies:
-  zhi-log: 1.5.5
+  zhi-sdk: 1.0.8
 
 devDependencies:
   '@microsoft/api-documenter': 7.21.5_@types+node@16.18.14
@@ -3973,6 +3973,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /compare-versions/6.0.0-rc.1:
+    resolution: {integrity: sha512-cFhkjbGY1jLFWIV7KegECbfuyYPxSGvgGkdkfM+ibboQDoPwg2FRHm5BSNTOApiauRBzJIQH7qvOJs2sW5ueKQ==}
+    dev: false
+
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
@@ -6213,6 +6217,10 @@ packages:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
 
+  /siyuan/0.3.12:
+    resolution: {integrity: sha512-Hcjn7Ujisayi9SW5o0DBtV2Jj/B8PKEXlIksJfbyeTYAtTBpgy++Fhy3nO0Pz1rJazadLt/dxKZ1X8JvlDgFHw==}
+    dev: false
+
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -7313,4 +7321,12 @@ packages:
       loglevel: 1.8.1
       loglevel-plugin-prefix: 0.8.4
       zhi-env: 1.8.2
+    dev: false
+
+  /zhi-sdk/1.0.8:
+    resolution: {integrity: sha512-LZGDBvhsNtR1zZCCrFeu7bJhpADLIr1wD2m/EVhQ7Q286NS5ojkRdenzJxHc3Uz/ynpLf+sNKLyCYZdCnP2qpQ==}
+    dependencies:
+      compare-versions: 6.0.0-rc.1
+      siyuan: 0.3.12
+      zhi-log: 1.5.5
     dev: false

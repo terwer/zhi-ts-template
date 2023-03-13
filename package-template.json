@@ -63,7 +63,7 @@
     "vue-eslint-parser": "^9.1.0"
   },
   "dependencies": {
-    "zhi-log": "^1.5.5"
+    "zhi-sdk": "^1.0.8"
   },
   "repository": "terwer/{{name}}",
   "homepage": "https://terwer.space",
