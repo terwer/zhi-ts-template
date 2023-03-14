@@ -10,6 +10,7 @@ if __name__ == "__main__":
     scriptutils.switch_workdir()
 
     # clean src build
+    scriptutils.rm_files("./src/**/*.d.ts")
     scriptutils.rm_files("./src/**/*.map")
 
     # none default dts
