@@ -9,10 +9,6 @@ if __name__ == "__main__":
     # 切换工作空间
     scriptutils.switch_workdir()
 
-    # clean src build
-    scriptutils.rm_files("./src/**/*.d.ts")
-    scriptutils.rm_files("./src/**/*.map")
-
     # none default dts
     scriptutils.rm_files("./typings/*alpha.d.ts")
     scriptutils.rm_files("./typings/*beta.d.ts")
