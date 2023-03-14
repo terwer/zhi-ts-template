@@ -1,8 +1,11 @@
 {
-  "name": "{{name}}",
+  "name": "terwer",
   "version": "0.0.1",
-  "description": "{{description}}",
-  "files": ["lib", "typings"],
+  "description": "ts template lib for test",
+  "files": [
+    "lib",
+    "typings"
+  ],
   "type": "module",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
@@ -15,7 +18,7 @@
   "typings": "./typings/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "rm -rf ./lib && rm -rf ./typings && vite build",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .ts ./src",
@@ -66,8 +69,8 @@
   "dependencies": {
     "zhi-sdk": "^1.0.8"
   },
-  "repository": "terwer/{{name}}",
+  "repository": "terwer/zhi-ts-template",
   "homepage": "https://terwer.space",
-  "author": "{{author}}",
+  "author": "terwer",
   "license": "GPL"
 }
