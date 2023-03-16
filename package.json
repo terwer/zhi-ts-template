@@ -18,7 +18,7 @@
   "typings": "./typings/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "rm -rf ./lib && rm -rf ./typings && vite build",
+    "build": "rm -rf ./typings && vite build && cp -r ./lib/* ./src/",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .ts ./src",
