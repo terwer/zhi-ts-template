@@ -19,6 +19,15 @@ script/venv
 coverage
 .env
 *.local
+src/*.d.ts
+src/*.map
+src/*.js
+src/*.cjs
+src/*.mjs
+src/**/*.d.ts
+src/**/*.map
+src/**/*.cjs
+src/**/*.mjs
 
 # Vercel
 .vercel
