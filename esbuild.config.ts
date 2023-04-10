@@ -25,12 +25,13 @@
 
 import { BuildOptions } from "esbuild"
 import path from "path"
-import minimist from "minimist"
+// import minimist from "minimist"
 
-const args = minimist(process.argv.slice(2))
-const isWatch = args.watch || args.w
+// const args = minimist(process.argv.slice(2))
+// const isWatch = args.watch || args.w
 
-const outDir = isWatch ? "dist" : "dist"
+// const outDir = isWatch ? "dist" : "dist"
+const outDir = "dist"
 console.log("outDir=>", outDir)
 const outFile = "index.js"
 
