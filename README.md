@@ -1,5 +1,5 @@
-# zhi-ts-template
-TypeScript project template for zhi-cli
+# ta-esbuild-lib
+TypeScript library using esbuild
 
 ## How to use
 
