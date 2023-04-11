@@ -18,6 +18,7 @@
     "@types/node": "^18.15.11",
     "esbuild": "^0.16.9",
     "eslint-config-custom": "workspace:*",
+    "esbuild-plugin-copy": "^2.1.1",
     "minimist": "^1.2.8",
     "ts-node": "^10.9.1",
     "tsconfig": "workspace:*"
