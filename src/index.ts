@@ -22,4 +22,7 @@
  * or visit www.terwer.space if you need additional information or have any
  * questions.
  */
-console.log("hello, zhi theme")
+
+export function hello(){
+    console.log("hello, zhi cli")
+}

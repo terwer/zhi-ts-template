@@ -4,7 +4,8 @@
     "target": "esnext",
     "module": "esnext",
     "isolatedModules": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "outDir": "./dist"
   },
   "include": [
     "env.d.ts",
