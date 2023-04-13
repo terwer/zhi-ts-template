@@ -13,6 +13,7 @@
   "scripts": {
     "dev": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/build.ts --watch",
     "build": "node --experimental-specifier-resolution=node --loader ts-node/esm scripts/build.ts --production",
+    "test": "jest",
     "lint": "eslint \"src/**/*.{ts,js}\" --fix",
     "doc": "../../packages/api-docs/node_modules/.bin/api-extractor run --local --verbose",
     "md": "../../packages/api-docs/node_modules/.bin/api-documenter markdown -i temp -o ../zhi-docs/src/api/{{name}} && pnpm mdfix",
@@ -29,6 +30,7 @@
     "minimist": "^1.2.8",
     "ts-node": "^10.9.1",
     "tsconfig": "workspace:*",
-    "api-docs": "workspace:*"
+    "api-docs": "workspace:*",
+    "jest-config-custom": "workspace:*"
   }
 }

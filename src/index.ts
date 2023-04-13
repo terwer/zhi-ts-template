@@ -1,3 +1,6 @@
+/**
+ * zhi-cli 入口
+ */
 export function hello() {
-  console.log("hello, zhi cli")
+  return "hello world"
 }
