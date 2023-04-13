@@ -25,22 +25,27 @@
 
 import { BuildOptions } from "esbuild"
 import path from "path"
-import minimist from "minimist"
+// import minimist from "minimist"
 import { dtsPlugin } from "esbuild-plugin-d.ts"
 // import { copy } from "esbuild-plugin-copy"
 
-const args = minimist(process.argv.slice(2))
-const isWatch = args.watch || args.w
+// const args = minimist(process.argv.slice(2))
+// const isWatch = args.watch || args.w
 
-// const baseDir = isWatch ? "/my-custom-folder" : "./"
+// for dist
 const baseDir = "./"
+const outDir = path.join(baseDir, "dist")
+
+// for outer custom output for dev
+// const baseDir = isWatch ? "my-custom-absolute-path" : "./"
+// const outDir = isWatch ? baseDir : path.join(baseDir, "dist")
 
 /**
  * 构建配置
  */
 export const esbuildConfig: BuildOptions = {
   entryPoints: ["src/index.ts"],
-  outfile: path.join(isWatch ? baseDir : path.join(baseDir, "dist"), "theme.js"),
+  outfile: path.join(outDir, "theme.js"),
   bundle: true,
   format: "cjs",
   platform: "node",
