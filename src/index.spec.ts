@@ -23,11 +23,11 @@
  * questions.
  */
 
-import { describe, expect, test } from "@jest/globals"
+import { describe, expect, it } from "@jest/globals"
 import { hello } from "./index"
 
 describe("zhi-cli", () => {
-  test("index", () => {
+  it("index", () => {
     expect(hello()).toBe("hello world")
   })
 })
