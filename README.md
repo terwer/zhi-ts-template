@@ -1,5 +1,5 @@
-# ts-esbuild-lib
-TypeScript library using esbuild
+# {{name}}
+{{description}}
 
 ## How to use
 

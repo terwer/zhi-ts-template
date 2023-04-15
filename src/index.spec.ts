@@ -26,7 +26,7 @@
 import { describe, expect, it } from "@jest/globals"
 import { hello } from "./index"
 
-describe("zhi-cli", () => {
+describe("{{name}}", () => {
   it("index", () => {
     expect(hello()).toBe("hello world")
   })
