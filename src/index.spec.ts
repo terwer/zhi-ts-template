@@ -25,8 +25,11 @@
 
 import { describe, expect, it } from "@jest/globals"
 import { hello } from "./index"
+import { getNormalizedEnvDefines } from "../../../packages/esbuild-config-custom/esmUtils"
 
 describe("{{name}}", () => {
+  getNormalizedEnvDefines(["NODE", "VITE_"])
+
   it("index", () => {
     expect(hello()).toBe("hello world")
   })
