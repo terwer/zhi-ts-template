@@ -56,7 +56,7 @@ module.exports = {
         // copy folder
         {
           from: "./public/**/*",
-          to: [path.join(distDir, "assets")],
+          to: [distDir],
         },
         // copy one file
         {
