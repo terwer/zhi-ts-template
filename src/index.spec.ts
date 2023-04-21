@@ -24,10 +24,10 @@
  */
 
 import { describe, expect, it } from "vitest"
-import { hello } from "./index"
+import init from "./index"
 
 describe("{{name}}", () => {
   it("index", () => {
-    expect(hello()).toBe("hello world")
+    expect(init()).toBe("ok")
   })
 })

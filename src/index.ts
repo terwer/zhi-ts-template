@@ -1,6 +1,8 @@
 /**
  * zhi-cli 入口
  */
-export function hello() {
-  return "hello world"
+const init = () => {
+  return "ok"
 }
+
+export default init
