@@ -25,8 +25,8 @@
 
 const path = require("path")
 const minimist = require("minimist")
-const {dtsPlugin} = require("esbuild-plugin-d.ts")
-const {copy} = require("esbuild-plugin-copy")
+const { dtsPlugin } = require("esbuild-plugin-d.ts")
+const { copy } = require("esbuild-plugin-copy")
 
 const args = minimist(process.argv.slice(2))
 // const isProduction = args.production || args.prod
