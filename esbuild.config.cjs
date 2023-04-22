@@ -27,6 +27,7 @@ const path = require("path")
 const minimist = require("minimist")
 const { dtsPlugin } = require("esbuild-plugin-d.ts")
 const { copy } = require("esbuild-plugin-copy")
+// import inlineImage from "esbuild-plugin-inline-image"
 
 const args = minimist(process.argv.slice(2))
 // const isProduction = args.production || args.prod
@@ -73,6 +74,10 @@ module.exports = {
         ],
         watch: true,
       }),
+      // inlineImage({
+      //   limit: 5000,
+      //   extensions: ["png", "jpg", "jpeg", "gif", "svg", "webp"],
+      // }),
     ]
   },
   customConfig: {},
