@@ -9,11 +9,11 @@
     "outDir": "./lib"
   },
   "include": [
-    "**/*.d.ts",
-    "**/*.ts",
-    "**/*.spec.ts"
+    "./**/*.vue",
+    "./**/*.ts",
+    "./**/*.spec.ts"
   ],
   "exclude": [
-    "node_modules"
+    "./dist"
   ]
 }
