@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs"
 import terser from "@rollup/plugin-terser"
 import copy from "rollup-plugin-copy"
 import serve from "rollup-plugin-serve"
+import livereload from "rollup-plugin-livereload"
 
 const isProduction = !process.env.ROLLUP_WATCH
 
@@ -21,5 +22,6 @@ export default {
       targets: [{ src: ["public/index.html", "public/favicon.ico"], dest: "dist" }],
     }),
     serve("dist"),
+    livereload(),
   ],
 }
