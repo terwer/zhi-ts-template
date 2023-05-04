@@ -1,0 +1,14 @@
+{
+  "name": "{{name}}",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "{{description}}",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "rollup-config-custom": "workspace:*"
+  }
+}
