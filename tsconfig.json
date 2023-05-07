@@ -1,26 +1,27 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "target": "ES2020",
     "useDefineForClassFields": true,
-    "strict": true,
-    "sourceMap": false,
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "Node",
+    // "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "allowJs": true,
-    "checkJs": true,
-    "noImplicitAny": true,
-    "declaration": true,
-    "declarationMap": true,
-    "baseUrl": ".",
-    "outDir": "./lib",
-    "paths": {
-      "~/*": ["./*"]
-    }
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "types": ["node", "vite/client"]
   },
-  "include": [".eslintrc.cjs", "./**/*.ts", "*.ts"],
-  "exclude": [".github", "node_modules", "lib/**/*"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

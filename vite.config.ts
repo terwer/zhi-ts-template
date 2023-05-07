@@ -1,29 +1,65 @@
-import path from "path"
-import { defineConfig } from "vite"
-import dts from "vite-plugin-dts"
-import eslint from "vite-plugin-eslint"
+/// <reference types="vitest" />
 
+import { defineConfig } from "vite"
+import { join } from "path"
+import { viteStaticCopy } from "vite-plugin-static-copy"
+// import viteTsConfigPaths from "vite-tsconfig-paths"
+import dts from "vite-plugin-dts"
+
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [dts(), eslint()],
-  resolve: {
-    alias: [
-      {
-        find: "~",
-        replacement: path.resolve(__dirname, ""),
-      },
-    ],
-  },
+  plugins: [
+    dts({
+      entryRoot: "src",
+      tsConfigFilePath: join(__dirname, "tsconfig.json"),
+      skipDiagnostics: true,
+    }),
+
+    // viteTsConfigPaths({
+    //   root: "../../",
+    // }),
+
+    viteStaticCopy({
+      targets: [
+        {
+          src: "README.md",
+          dest: "./",
+        },
+      ],
+    }),
+  ],
+
+  // Uncomment this if you are using workers.
+  // worker: {
+  //  plugins: [
+  //    viteTsConfigPaths({
+  //      root: '../../',
+  //    }),
+  //  ],
+  // },
+
+  // Configuration for building your library.
+  // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: "lib",
     lib: {
-      entry: [path.resolve(__dirname, "src/index.ts")],
-      formats: ["es", "cjs"],
-      name: "index",
+      // Could also be a dictionary or array of multiple entry points.
+      entry: "src/index.ts",
+
+      name: "zhi-env",
+      fileName: "index",
+      // Change this to the formats you want to support.
+      // Don't forgot to update your package.json as well.
+      formats: ["es"],
     },
     rollupOptions: {
-      output: {
-        exports: "named",
-      },
+      // External packages that should not be bundled into your library.
+      external: [],
     },
+  },
+
+  test: {
+    globals: true,
+    environment: "jsdom",
+    include: ["src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
   },
 })

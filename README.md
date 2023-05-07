@@ -1,26 +1,41 @@
-# zhi-ts-template
+# zhi-env
 
 TypeScript project template for zhi-lib
 
-![version](https://img.shields.io/github/release/terwer/zhi-ts-template.svg?style=flat-square)
-![license](https://img.shields.io/badge/license-GPL-blue.svg?style=popout-square)
+## Usage
 
-## Useful scripts
-
-### Build
-
-```bash
-pnpm ci
+```js
+// usage
 ```
 
-### Publish to npm
+## Deps
 
-```bash
-pnpm package
+```
+## Congregations! zhi-env need no deps, it is just pure js code 🎉
 ```
 
-### Docs
+## Dev
 
 ```bash
-pnpm vitepress:dev
+pnpm dev -F zhi-lib
+```
+
+## Build
+
+```bash
+pnpm build -F zhi-lib
+```
+
+## Test
+
+Execute the unit tests via [vitest](https://vitest.dev)
+
+```bash
+pnpm test -F zhi-lib
+```
+
+## Publish
+
+```bash
+pnpm publish -F zhi-lib --tag latest
 ```
