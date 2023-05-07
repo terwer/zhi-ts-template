@@ -3,10 +3,16 @@
   "version": "0.0.1",
   "type": "module",
   "description": "{{description}}",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "repository": "terwer/zhi",
   "homepage": "https://github.com/terwer/zhi/tree/main/libs/{{name}}",
   "author": "{{author}}",
   "license": "GPL",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "keywords": [
     "zhi",
     "lib"
