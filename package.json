@@ -14,14 +14,9 @@
     "dev": "zhi-build --watch",
     "build": "zhi-build --production",
     "test": "jest --coverage=true --coverageDirectory=../../reports/test/{{name}}",
-    "lint": "eslint 'src/**/*.{ts,js}' --fix",
-    "doc": "../../packages/api-docs/node_modules/.bin/api-extractor run --local --verbose",
-    "md": "../../packages/api-docs/node_modules/.bin/api-documenter markdown -i temp -o ../zhi-docs/src/api/{{name}} && pnpm mdfix",
-    "mdfix": "pnpm mdfmt && rm ../zhi-docs/src/api/{{name}}/index.md",
-    "mdfmt": "echo '---\ntitle: {{name}}\n---' | cat - ../zhi-docs/src/api/{{name}}/index.md > ../zhi-docs/src/api/{{name}}/README.md"
+    "lint": "eslint 'src/**/*.{ts,js}' --fix"
   },
   "devDependencies": {
-    "api-docs": "workspace:*",
     "esbuild-config-custom": "workspace:*",
     "eslint-config-custom": "workspace:*",
     "vitest-config-custom": "workspace:*",
