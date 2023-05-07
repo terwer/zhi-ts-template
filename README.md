@@ -1,6 +1,6 @@
-# zhi-env
+# {{name}}
 
-TypeScript project template for zhi-lib
+{{description}}
 
 ## Usage
 
@@ -17,13 +17,13 @@ TypeScript project template for zhi-lib
 ## Dev
 
 ```bash
-pnpm dev -F zhi-lib
+pnpm dev -F {{name}}
 ```
 
 ## Build
 
 ```bash
-pnpm build -F zhi-lib
+pnpm build -F {{name}}
 ```
 
 ## Test
@@ -31,11 +31,11 @@ pnpm build -F zhi-lib
 Execute the unit tests via [vitest](https://vitest.dev)
 
 ```bash
-pnpm test -F zhi-lib
+pnpm test -F {{name}}
 ```
 
 ## Publish
 
 ```bash
-pnpm publish -F zhi-lib --tag latest
+pnpm publish -F {{name}} --tag latest
 ```
