@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "turbo": "^1.9.4",
+    "@terwer/commit-config-custom": "latest",
     "@terwer/eslint-config-custom": "latest"
   },
   "engines": {
