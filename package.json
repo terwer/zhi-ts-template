@@ -31,8 +31,7 @@
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
-    },
-    "commitizenEmoji": {}
+    }
   },
   "devDependencies": {
     "turbo": "^1.9.4",
