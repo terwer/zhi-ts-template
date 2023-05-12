@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@terwer/eslint-config-custom": "latest",
-    "@terwer/tsconfig": "latest",
     "@terwer/vite-config-custom": "latest"
   }
 }
