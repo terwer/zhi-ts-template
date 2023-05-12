@@ -1,5 +1,5 @@
-# Zhi
+[中文](README_zh_CN.md)
 
-A simple workspace
+# {{name}}
 
-[中文版](README_zh_CN.md)
+{{description}}
