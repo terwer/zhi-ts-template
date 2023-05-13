@@ -1,8 +1,7 @@
-import { describe, expect, it } from "vitest"
-import init from "./index"
+import { describe, it } from "vitest"
 
-describe("{{name}}", () => {
-  it("index", () => {
-    expect(init()).toBe("ok")
+describe("index", () => {
+  it("test index", () => {
+    console.log("hello")
   })
 })

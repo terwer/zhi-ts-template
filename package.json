@@ -24,7 +24,7 @@
     "test": "vitest --watch"
   },
   "devDependencies": {
-    "@terwer/eslint-config-custom": "latest",
-    "@terwer/vite-config-custom": "latest"
+    "@terwer/eslint-config-custom": "^1.2.0",
+    "@terwer/vite-config-custom": "^0.2.0"
   }
 }
