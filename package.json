@@ -26,6 +26,6 @@
   },
   "devDependencies": {
     "@terwer/eslint-config-custom": "^1.2.0",
-    "@terwer/vite-config-custom": "^0.2.0"
+    "@terwer/vite-config-custom": "^0.5.0"
   }
 }
