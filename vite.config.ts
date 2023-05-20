@@ -2,10 +2,37 @@
 
 import { resolve } from "path"
 import { defineConfig } from "vite"
+import { viteStaticCopy } from "vite-plugin-static-copy"
 import dts from "vite-plugin-dts"
+import minimist from "minimist"
+import livereload from "rollup-plugin-livereload"
+
+const args = minimist(process.argv.slice(2))
+const isWatch = args.watch || args.w || false
+const devDistDir = "./dist"
+const distDir = isWatch ? devDistDir : "./dist"
+// const distDir = devDistDir
+
+console.log("isWatch=>", isWatch)
+console.log("distDir=>", distDir)
 
 export default defineConfig({
-  plugins: [dts()],
+  plugins: [
+    dts(),
+
+    viteStaticCopy({
+      targets: [
+        {
+          src: "README.md",
+          dest: "./",
+        },
+        {
+          src: "package.json",
+          dest: "./",
+        },
+      ],
+    }),
+  ],
 
   build: {
     lib: {
@@ -16,6 +43,7 @@ export default defineConfig({
       formats: ["cjs"],
     },
     rollupOptions: {
+      plugins: [...(isWatch ? [livereload(devDistDir)] : [])],
       // make sure to externalize deps that shouldn't be bundled
       // into your library
       external: [],
