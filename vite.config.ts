@@ -35,6 +35,13 @@ export default defineConfig({
   ],
 
   build: {
+    // 输出路径
+    outDir: distDir,
+    emptyOutDir: false,
+
+    // 构建后是否生成 source map 文件
+    sourcemap: false,
+
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, "src/index.ts"),
