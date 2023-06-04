@@ -23,26 +23,9 @@
  * questions.
  */
 
-import { App, IObject, Plugin } from "siyuan"
-import { simpleLogger } from "zhi-lib-base"
-
-import "../index.styl"
-import {isDev} from "./Constants"
-
-export default class ImporterPlugin extends Plugin {
-  private logger
-
-  constructor(options: { app: App; id: string; name: string; i18n: IObject }) {
-    super(options)
-
-    this.logger = simpleLogger("index", "demo", isDev)
-  }
-
-  onload() {
-    this.logger.info("Demo loaded")
-  }
-
-  onunload() {
-    this.logger.info("Demo loaded")
-  }
-}
+export const workspaceDir = `${(window as any).siyuan.config.system.workspaceDir}`
+export const dataDir = `${(window as any).siyuan.config.system.dataDir}`
+export const mediaDir = `./assets`
+export const isDev = process.env.DEV_MODE === "true"
+export const siyuanApiUrl = ""
+export const siyuanApiToken = ""

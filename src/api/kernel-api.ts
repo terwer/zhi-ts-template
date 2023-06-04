@@ -23,26 +23,17 @@
  * questions.
  */
 
-import { App, IObject, Plugin } from "siyuan"
-import { simpleLogger } from "zhi-lib-base"
+import { BaseApi } from "./base-api"
 
-import "../index.styl"
-import {isDev} from "./Constants"
+/**
+ * 思源笔记服务端API v2.8.9
+ *
+ * @see {@link https://github.com/siyuan-note/siyuan/blob/master/API_zh_CN.md API}
+ *
+ * @author terwer
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+class KernelApi extends BaseApi {}
 
-export default class ImporterPlugin extends Plugin {
-  private logger
-
-  constructor(options: { app: App; id: string; name: string; i18n: IObject }) {
-    super(options)
-
-    this.logger = simpleLogger("index", "demo", isDev)
-  }
-
-  onload() {
-    this.logger.info("Demo loaded")
-  }
-
-  onunload() {
-    this.logger.info("Demo loaded")
-  }
-}
+export default KernelApi
