@@ -1,31 +1,11 @@
 {
-  "name": "{{name}}",
-  "version": "0.0.1",
-  "description": "{{description}}",
+  "name": "zhi",
   "private": true,
-  "workspaces": [
-    "tools/*",
-    "libs/*",
-    "apps/*",
-    "themes/*",
-    "widgets/*",
-    "plugins/*"
-  ],
+  "packageManager": "pnpm@7.15.0",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "localBuild": "turbo run localBuild",
-    "staticBuild": "turbo run staticBuild",
-    "nodeBuild": "turbo run nodeBuild",
-    "dockerBuild": "turbo run dockerBuild",
-    "vercelBuild": "turbo run vercelBuild",
-    "siyuanBuild": "turbo run siyuanBuild",
-    "test": "turbo run test",
-    "start": "turbo run start",
-    "doc": "turbo run doc",
     "lint": "turbo run lint",
-    "graph": " turbo run build --graph=dependency-graph.png",
-    "prepare": "is-ci || husky install",
     "cz": "git-cz"
   },
   "config": {
@@ -34,15 +14,8 @@
     }
   },
   "devDependencies": {
-    "turbo": "^1.9.4",
-    "@terwer/commit-config-custom": "latest",
-    "@terwer/eslint-config-custom": "latest"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "packageManager": "pnpm@8.1.1",
-  "repository": "terwer/{{name}}",
-  "homepage": "https://terwer.space",
-  "author": "{{author}}"
+    "@terwer/commit-config-custom": "workspace:*",
+    "@terwer/eslint-config-custom": "workspace:*",
+    "turbo": "^1.10.1"
+  }
 }
