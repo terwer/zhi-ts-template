@@ -8,18 +8,18 @@
   "repository": "terwer/zhi",
   "homepage": "https://github.com/terwer/zhi/tree/main/apps/{{name}}",
   "author": "{{author}}",
-  "license": "GPL",
+  "license": "MIT",
   "keywords": [],
   "scripts": {
     "dev": "zhi-build --watch",
     "build": "zhi-build --production",
-    "test": "jest --coverage=true --coverageDirectory=../../reports/test/{{name}}",
+    "test": "vitest",
     "lint": "eslint 'src/**/*.{ts,js}' --fix"
   },
   "devDependencies": {
-    "esbuild-config-custom": "workspace:*",
-    "eslint-config-custom": "workspace:*",
-    "vitest-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "@terwer/esbuild-config-custom": "workspace:*",
+    "@terwer/eslint-config-custom": "workspace:*",
+    "@terwer/vitest-config-custom": "workspace:*",
+    "@terwer/tsconfig": "workspace:*"
   }
 }
