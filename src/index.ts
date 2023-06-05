@@ -27,7 +27,7 @@ import { App, IObject, Plugin } from "siyuan"
 import { simpleLogger } from "zhi-lib-base"
 
 import "../index.styl"
-import {isDev} from "./Constants"
+import { isDev } from "./Constants"
 
 export default class ImporterPlugin extends Plugin {
   private logger
