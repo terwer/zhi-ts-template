@@ -8,7 +8,7 @@
   "repository": "terwer/zhi",
   "homepage": "https://github.com/terwer/zhi/tree/main/libs/{{name}}",
   "author": "{{author}}",
-  "license": "GPL",
+  "license": "MIT",
   "files": [
     "dist",
     "README.md"
