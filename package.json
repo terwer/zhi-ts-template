@@ -1,8 +1,8 @@
 {
-  "name": "siyuan-plugin-random-doc",
-  "version": "1.0.1",
+  "name": "{{name}}",
+  "version": "0.0.1",
+  "description": "{{description}}",
   "type": "module",
-  "description": "Document is like a box of chocolates. You never know what you're going to get",
   "repository": "terwer/siyuan-plugin-random-doc",
   "homepage": "https://github.com/terwer/siyuan-plugin-random-doc",
   "author": "terwer",
