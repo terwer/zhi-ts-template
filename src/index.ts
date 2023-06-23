@@ -43,6 +43,6 @@ export default class ImporterPlugin extends Plugin {
   }
 
   onunload() {
-    this.logger.info("Demo loaded")
+    this.logger.info("Demo unloaded")
   }
 }
