@@ -27,5 +27,11 @@
   "devDependencies": {
     "@terwer/eslint-config-custom": "workspace:*",
     "@terwer/vite-config-custom": "workspace:*"
+  },
+  "dependencies": {
+    "zhi-lib-base": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
