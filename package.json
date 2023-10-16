@@ -21,5 +21,11 @@
     "@terwer/eslint-config-custom": "workspace:*",
     "@terwer/vitest-config-custom": "workspace:*",
     "@terwer/tsconfig": "workspace:*"
+  },
+   "dependencies": {
+    "zhi-lib-base": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
