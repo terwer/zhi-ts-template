@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest"
-import init from "./index"
+import main from "./index"
 
 describe("{{name}}", () => {
-  it("index", () => {
-    expect(init()).toBe("ok")
+  it("index", async () => {
+    expect(await main([])).toBe("ok")
   })
 })
