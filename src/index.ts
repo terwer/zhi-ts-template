@@ -22,27 +22,12 @@
  * or visit www.terwer.space if you need additional information or have any
  * questions.
  */
-
-import { App, IObject, Plugin } from "siyuan"
-import { simpleLogger } from "zhi-lib-base"
+import { Plugin } from "obsidian"
 
 import "../index.styl"
-import { isDev } from "./Constants"
 
-export default class ImporterPlugin extends Plugin {
-  private logger
-
-  constructor(options: { app: App; id: string; name: string; i18n: IObject }) {
-    super(options)
-
-    this.logger = simpleLogger("index", "demo", isDev)
-  }
-
-  onload() {
-    this.logger.info("Demo loaded")
-  }
-
-  onunload() {
-    this.logger.info("Demo unloaded")
+export default class MyPlugin extends Plugin {
+  async onload() {
+    console.log("hello, obsidian")
   }
 }
