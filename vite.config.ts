@@ -5,6 +5,8 @@ import { viteStaticCopy } from "vite-plugin-static-copy"
 import livereload from "rollup-plugin-livereload"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
 import fg from "fast-glob"
+import builtins from "builtin-modules";
+import {isDev} from "./src/Constants";
 
 const args = minimist(process.argv.slice(2))
 const isWatch = args.watch || args.w || false
@@ -66,7 +68,7 @@ export default defineConfig({
     emptyOutDir: false,
 
     // 构建后是否生成 source map 文件
-    sourcemap: false,
+    sourcemap: isDev ? "inline" : false,
 
     // 设置为 false 可以禁用最小化混淆
     // 或是用来指定是应用哪种混淆器
@@ -78,7 +80,7 @@ export default defineConfig({
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, "src/index.ts"),
       // the proper extensions will be added
-      fileName: "index",
+      fileName: "main",
       formats: ["cjs"],
     },
     rollupOptions: {
@@ -102,13 +104,27 @@ export default defineConfig({
 
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ["siyuan", "process"],
+      external: [
+        "obsidian",
+        "electron",
+        "@codemirror/autocomplete",
+        "@codemirror/collab",
+        "@codemirror/commands",
+        "@codemirror/language",
+        "@codemirror/lint",
+        "@codemirror/search",
+        "@codemirror/state",
+        "@codemirror/view",
+        "@lezer/common",
+        "@lezer/highlight",
+        "@lezer/lr",
+        ...builtins],
 
       output: {
         entryFileNames: "[name].js",
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === "style.css") {
-            return "index.css"
+            return "styles.css"
           }
           return assetInfo.name
         },
