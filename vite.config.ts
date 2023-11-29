@@ -1,21 +1,14 @@
-import { resolve } from "path"
-import { defineConfig, loadEnv } from "vite"
+import {resolve} from "path"
+import {defineConfig} from "vite"
 import minimist from "minimist"
-import { viteStaticCopy } from "vite-plugin-static-copy"
-import livereload from "rollup-plugin-livereload"
-import { svelte } from "@sveltejs/vite-plugin-svelte"
-import fg from "fast-glob"
-import builtins from "builtin-modules";
-import {isDev} from "./src/Constants";
+import {viteStaticCopy} from "vite-plugin-static-copy"
+import {svelte} from "@sveltejs/vite-plugin-svelte"
+import builtins from "builtin-modules"
 
 const args = minimist(process.argv.slice(2))
 const isWatch = args.watch || args.w || false
 const isWindows = process.platform === "win32"
-let devDistDir = "/Users/terwer/Documents/mydocs/SiYuanWorkspace/public/data/plugins/siyuan-plugin-random-doc"
-if (isWindows) {
-  devDistDir = "C:\\Users\\terwer\\Documents\\mydocs\\SiyuanWorkspace\\public\\data\\plugins\\siyuan-plugin-random-doc"
-}
-const distDir = isWatch ? devDistDir : "./dist"
+const distDir = "./dist"
 
 console.log("isWatch=>", isWatch)
 console.log("distDir=>", distDir)
@@ -43,7 +36,11 @@ export default defineConfig({
           dest: "./",
         },
         {
-          src: "./plugin.json",
+          src: "./manifest.json",
+          dest: "./",
+        },
+        {
+          src: "./versions.json",
           dest: "./",
         },
         {
@@ -68,7 +65,7 @@ export default defineConfig({
     emptyOutDir: false,
 
     // 构建后是否生成 source map 文件
-    sourcemap: isDev ? "inline" : false,
+    sourcemap: isWatch ? "inline" : false,
 
     // 设置为 false 可以禁用最小化混淆
     // 或是用来指定是应用哪种混淆器
@@ -84,23 +81,7 @@ export default defineConfig({
       formats: ["cjs"],
     },
     rollupOptions: {
-      plugins: [
-        ...(isWatch
-          ? [
-              livereload(devDistDir),
-              {
-                //监听静态资源文件
-                name: "watch-external",
-                async buildStart() {
-                  const files = await fg(["src/i18n/*.json", "./README*.md", "./plugin.json"])
-                  for (const file of files) {
-                    this.addWatchFile(file)
-                  }
-                },
-              },
-            ]
-          : []),
-      ],
+      plugins: [],
 
       // make sure to externalize deps that shouldn't be bundled
       // into your library
