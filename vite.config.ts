@@ -6,12 +6,12 @@ import { viteStaticCopy } from "vite-plugin-static-copy"
 import dts from "vite-plugin-dts"
 import minimist from "minimist"
 import livereload from "rollup-plugin-livereload"
+import { babel, getBabelOutputPlugin } from "@rollup/plugin-babel"
 
 const args = minimist(process.argv.slice(2))
 const isWatch = args.watch || args.w || false
 const devDistDir = "./dist"
 const distDir = isWatch ? devDistDir : "./dist"
-// const distDir = devDistDir
 
 console.log("isWatch=>", isWatch)
 console.log("distDir=>", distDir)
@@ -39,23 +39,40 @@ export default defineConfig({
     outDir: distDir,
     emptyOutDir: false,
 
+    minify: false,
     // 构建后是否生成 source map 文件
     sourcemap: false,
 
     lib: {
-      // Could also be a dictionary or array of multiple entry points
+      // 也可以是文件夹或者多个个入口数组
       entry: resolve(__dirname, "src/index.ts"),
-      // the proper extensions will be added
-      fileName: "index",
-      formats: ["cjs"],
+      name: "HelloWordPlugin",
+      formats: ["iife"],
     },
     rollupOptions: {
-      plugins: [...(isWatch ? [livereload(devDistDir)] : [])],
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
+      plugins: [
+        ...(isWatch
+            ? [
+              livereload(devDistDir),
+
+              // https://github.com/rollup/plugins/tree/master/packages/babel
+              babel({
+                babelHelpers: "bundled",
+                exclude: "node_modules/**",
+              }),
+            ]
+            : [
+              // https://github.com/rollup/plugins/tree/master/packages/babel
+              babel({
+                exclude: "node_modules/**",
+              }),
+            ]),
+      ],
+      // 排除不希望被打包进去的类库
       external: [],
       output: {
         entryFileNames: "[name].js",
+        plugins: [getBabelOutputPlugin({ presets: ["@babel/preset-env"], allowAllFormats: true })],
       },
     },
   },

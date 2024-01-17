@@ -25,7 +25,9 @@
     "test": "npx vitest --watch"
   },
   "devDependencies": {
-    "@terwer/eslint-config-custom": "workspace:*",
-    "@terwer/vite-config-custom": "workspace:*"
+    "@babel/preset-env": "^7.23.8",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@terwer/eslint-config-custom": "^1.3.6",
+    "@terwer/vite-config-custom": "^0.7.6"
   }
 }

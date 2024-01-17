@@ -1,5 +1,5 @@
-const init = () => {
-  return "ok"
+class HelloWordPlugin {
+
 }
 
-export default init
+export default HelloWordPlugin
