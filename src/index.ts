@@ -10,7 +10,7 @@
 import { AbstractPlugin } from "@terwer/publisher-pro-sdk"
 
 /**
- * WordPress插件类，继承自 AbstractPlugin 抽象类
+ * HelloWorld 插件类，继承自 AbstractPlugin 抽象类
  *
  * @extends AbstractPlugin
  * @author terwer
