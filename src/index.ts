@@ -7,6 +7,8 @@
  *  of this license document, but changing it is not allowed.
  */
 
+import { AbstractPlugin } from "@terwer/publisher-pro-sdk"
+
 /**
  * WordPress插件类，继承自 AbstractPlugin 抽象类
  *
@@ -15,4 +17,4 @@
  * @version 2.0.0
  * @since 2.0.0
  */
-export default class HelloWorldPlugin {}
+export default class HelloWorldPlugin extends AbstractPlugin{}
