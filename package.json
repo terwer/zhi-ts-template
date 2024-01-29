@@ -1,13 +1,13 @@
 {
-  "name": "wordpress-plugin",
+  "name": "{{name}}",
   "version": "0.0.1",
   "type": "module",
-  "description": "WordPress plugin for publisher pro",
+  "description": "{{description}}",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "repository": "terwer/zhi",
-  "homepage": "https://github.com/terwer/zhi/tree/main/libs/wordpress-plugin",
-  "author": "Terwer Inc",
+  "homepage": "https://github.com/terwer/zhi/tree/main/libs/{{name}}",
+  "author": "{{author}}",
   "license": "MIT",
   "files": [
     "dist",
