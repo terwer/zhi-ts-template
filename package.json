@@ -1,13 +1,13 @@
 {
-  "name": "{{name}}",
+  "name": "wordpress-plugin",
   "version": "0.0.1",
   "type": "module",
-  "description": "{{description}}",
+  "description": "WordPress plugin for publisher pro",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "repository": "terwer/zhi",
-  "homepage": "https://github.com/terwer/zhi/tree/main/libs/{{name}}",
-  "author": "{{author}}",
+  "homepage": "https://github.com/terwer/zhi/tree/main/libs/wordpress-plugin",
+  "author": "Terwer Inc",
   "license": "MIT",
   "files": [
     "dist",
@@ -28,6 +28,10 @@
     "@babel/preset-env": "^7.23.8",
     "@rollup/plugin-babel": "^6.0.4",
     "@terwer/eslint-config-custom": "^1.3.6",
-    "@terwer/vite-config-custom": "^0.7.6"
+    "@terwer/vite-config-custom": "^0.7.6",
+    "@terwer/publisher-pro-sdk": "workspace:^"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
