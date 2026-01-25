@@ -16,4 +16,5 @@
  */
 export const workspaceDir = `${(window as any).siyuan.config.system.workspaceDir}`
 export const dataDir = `${(window as any).siyuan.config.system.dataDir}`
+// @ts-ignore
 export const isDev = process.env.DEV_MODE === "true"
