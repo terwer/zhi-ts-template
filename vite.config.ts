@@ -1,22 +1,21 @@
-import { resolve } from "path"
-import { defineConfig, loadEnv } from "vite"
-import minimist from "minimist"
-import { viteStaticCopy } from "vite-plugin-static-copy"
-import livereload from "rollup-plugin-livereload"
 import react from "@vitejs/plugin-react"
 import fg from "fast-glob"
+import minimist from "minimist"
+import { resolve } from "path"
+import livereload from "rollup-plugin-livereload"
+import { defineConfig } from "vite"
+import { viteStaticCopy } from "vite-plugin-static-copy"
 
 const args = minimist(process.argv.slice(2))
 const isWatch = args.watch || args.w || false
-const devDistDir = "./"
-const distDir = isWatch ? devDistDir : "./dist"
+const distDir = "./dist"
 
 console.log("isWatch=>", isWatch)
 console.log("distDir=>", distDir)
 
 export default defineConfig({
   plugins: [
-    react()],
+    react(),
 
     viteStaticCopy({
       targets: [
@@ -43,6 +42,10 @@ export default defineConfig({
         {
           src: "./src/i18n/**",
           dest: "./i18n/",
+        },
+        {
+          src: "./public/**",
+          dest: "./public/",
         },
       ],
     }),
@@ -80,20 +83,21 @@ export default defineConfig({
     rollupOptions: {
       plugins: [
         ...(isWatch
-          ? [
-              livereload(devDistDir),
+            ? [
+              livereload(distDir),
               {
                 //监听静态资源文件
                 name: "watch-external",
                 async buildStart() {
                   const files = await fg(["src/i18n/*.json", "./README*.md", "./plugin.json"])
                   for (const file of files) {
+                    // @ts-ignore
                     this.addWatchFile(file)
                   }
                 },
               },
             ]
-          : []),
+            : []),
       ],
 
       // make sure to externalize deps that shouldn't be bundled
@@ -102,12 +106,12 @@ export default defineConfig({
 
       output: {
         entryFileNames: "[name].js",
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === "style.css") {
-            return "index.css"
-          }
-          return assetInfo.name
-        },
+        assetFileNames: (chunkInfo: any) => {
+            if (chunkInfo.name === "style.css") {
+              return "index.css"
+            }
+            return chunkInfo.name
+        }
       },
     },
   },

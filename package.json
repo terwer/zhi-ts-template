@@ -20,7 +20,7 @@
     "package": "python scripts/package.py"
   },
     "dependencies": {
-    "zhi-lib-base": "^0.2.4",
+    "zhi-lib-base": "^0.8.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
