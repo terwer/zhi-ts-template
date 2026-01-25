@@ -24,25 +24,38 @@
  */
 
 import { App, IObject, Plugin } from "siyuan"
-import { simpleLogger } from "zhi-lib-base"
+import { simpleLogger, ILogger } from "zhi-lib-base"
 
 import "../index.styl"
 import { isDev } from "./Constants"
 
-export default class ImporterPlugin extends Plugin {
-  private logger
+
+/**
+ * {{className}} 插件主类
+ * {{description}}
+ * 
+ * @author {{githubAuthor}}
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+export default class {{className}} extends Plugin {
+  private logger: ILogger
 
   constructor(options: { app: App; id: string; name: string; i18n: IObject }) {
     super(options)
 
-    this.logger = simpleLogger("index", "demo", isDev)
+    this.logger = simpleLogger("index", "{{lowerClassName}}", isDev)
   }
 
   onload() {
-    this.logger.info("Demo loaded")
+    if(isDev){
+      this.logger.info("{{className}} loaded")
+    }
   }
 
   onunload() {
-    this.logger.info("Demo unloaded")
+    if(isDev){
+      this.logger.info("{{className}} unloaded")
+    }
   }
 }

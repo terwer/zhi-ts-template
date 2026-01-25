@@ -1,15 +1,15 @@
 {
-  "name": "siyuan-plugin-demo",
-  "author": "terwer",
-  "url": "https://github.com/terwer/siyuan-plugin-demo",
+  "name": "{{pkgName}}",
+  "author": "{{githubAuthor}}",
+  "url": "https://github.com/{{githubAuthor}}/{{pkgName}}",
   "version": "0.0.1",
   "displayName": {
-    "default": "Plugin Demo",
-    "zh_CN": "插件示例"
+    "default": "{{name}}",
+    "zh_CN": "{{zhName}}"
   },
   "description": {
-    "default": "This a demo plugin project",
-    "zh_CN": "这是一个示例插件项目"
+    "default": "{{description}}",
+    "zh_CN": "{{zhDescription}}"
   },
   "readme": {
     "default": "README.md",

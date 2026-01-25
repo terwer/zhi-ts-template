@@ -7,47 +7,45 @@ name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      checks: write
     steps:
       # Create release
       - name: Create release
-        uses: google-github-actions/release-please-action@v3
+        uses: google-github-actions/release-please-action@v4
         id: release
         with:
-          release-type: node
-          package-name: release-please-action
-          ## branch to open pull release PR against (detected by default)
-          default-branch: main
-          ## Should breaking changes before 1.0.0 produce minor bumps? Default false
-          bump-minor-pre-major: false
-          ## Should feat changes before 1.0.0 produce patch bumps instead of minor bumps? Default false
-          bump-patch-for-minor-pre-major: false
-          ## If set, create releases that are pre-major or pre-release version marked as pre-release on GitHub. Defaults false
-          prerelease: false
-          ## header used within the release PR body, defaults to using :robot: I have created a release *beep* *boop*
-          pull-request-header: ':robot: A new release will be created'
-          ## A JSON formatted String containing to override the outputted changelog sections
-          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"refactor","section":"Code Refactoring","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"perf","section":"Performance Improvements","hidden":false}]'
+          # this assumes that you have created a personal access token
+          # (PAT) and configured it as a GitHub action secret named
+          # `GH_TOKEN` (this secret name is not important).
+          token: ${{ secrets.GH_TOKEN }}
+          # optional. customize path to release-please-config.json
+          config-file: release-please-config.json
+          # optional. customize path to .release-please-manifest.json
+          manifest-file: .release-please-manifest.json
 
       # Checkout
       - name: Checkout
         if: ${{ steps.release.outputs.release_created }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Install Node.js
       - name: Install Node.js
         if: ${{ steps.release.outputs.release_created }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
           registry-url: 'https://registry.npmjs.org'
 
       # Install pnpm
       - name: Install pnpm
         if: ${{ steps.release.outputs.release_created }}
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         id: pnpm-install
         with:
-          version: 8
+          version: 10.28.1
           run_install: false
 
       # Get pnpm store directory
@@ -61,7 +59,7 @@ jobs:
       # Setup pnpm cache
       - name: Setup pnpm cache
         if: ${{ steps.release.outputs.release_created }}
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -97,7 +95,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          ls -l ./build
           for f in $(find ./build -name '*.zip'); do
             gh release upload ${{ steps.release.outputs.tag_name }} $f
           done

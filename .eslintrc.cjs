@@ -1,26 +1,30 @@
+/*
+ *            GNU GENERAL PUBLIC LICENSE
+ *               Version 3, 29 June 2007
+ *
+ *  Copyright (C) 2022-2025 Terwer, Inc. <https://terwer.space/>
+ *  Everyone is permitted to copy and distribute verbatim copies
+ *  of this license document, but changing it is not allowed.
+ */
+
 module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:svelte/recommended",
-    "turbo",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "prettier",
   ],
 
   parser: "@typescript-eslint/parser",
-
-  overrides: [
-    {
-      files: ["*.svelte"],
-      parser: "svelte-eslint-parser",
-      // Parse the script in `.svelte` as TypeScript by adding the following configuration.
-      parserOptions: {
-        parser: "@typescript-eslint/parser",
-      },
+  
+  settings: {
+    react: {
+      version: "detect", 
     },
-  ],
+  },
 
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["@typescript-eslint", "react", "react-hooks", "prettier"],
 
   rules: {
     // Note: you must disable the base rule as it can report incorrect errors

@@ -1,5 +1,5 @@
 [English](README.md)
 
-# {{name}}
+# {{zhName}}
 
-{{description}}
+{{zhDescription}}

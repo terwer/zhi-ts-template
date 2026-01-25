@@ -1,0 +1,33 @@
+{
+  "vars":{
+    "githubAuthor": "terwer",
+    "name": "Plugin example",
+    "pkgName": "siyuan-plugin-example",
+    "className": "ExamplePlugin",
+    "lowerClassName": "examplePlugin",
+    "zhName": "思源插件示例",
+    "description": "A plugin for SiYuan note, with basic structure and configuration",
+    "zhDescription": "一个用于思源笔记的插件，包含基本结构和配置",
+    "license": "MIT"
+  },
+ "template": {
+    "README.md": {
+      "args": ["name", "description"]
+    },
+    "README_zh_CN.md": {
+      "args": ["zhName", "zhDescription"]
+    },
+    "package.json": {
+      "args": ["pkgName", "description", "githubAuthor", "license"]
+    },
+    "plugin.json": {
+      "args": ["pkgName", "name", "description", "githubAuthor", "license"]
+    },
+    "src/index.ts": {
+      "args": ["pkgName", "className", "lowerClassName", "githubAuthor", "description"]
+    },
+    "scripts/package.py": {
+      "args": ["pkgName"]
+    }
+  }
+}

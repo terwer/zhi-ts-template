@@ -23,6 +23,13 @@
  * questions.
  */
 
+/**
+ * 常量定义
+ *
+ * @author terwer
+ * @version 0.0.1
+ * @since 0.0.1
+ */
 export const workspaceDir = `${(window as any).siyuan.config.system.workspaceDir}`
 export const dataDir = `${(window as any).siyuan.config.system.dataDir}`
 export const isDev = process.env.DEV_MODE === "true"
