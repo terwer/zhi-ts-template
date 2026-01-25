@@ -7,7 +7,7 @@
  *  of this license document, but changing it is not allowed.
  */
 
-import { App, type IObject, Plugin } from "siyuan"
+import { type App, type IObject, Plugin } from "siyuan"
 import { simpleLogger, type ILogger } from "zhi-lib-base"
 
 import "../index.styl"
