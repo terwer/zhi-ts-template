@@ -4,13 +4,13 @@
     "name": "Plugin example",
     "pkgName": "siyuan-plugin-example",
     "className": "ExamplePlugin",
-    "lowerClassName": "examplePlugin",
+    "lowerClassName": "example-plugin",
     "zhName": "思源插件示例",
     "description": "A plugin for SiYuan note, with basic structure and configuration",
     "zhDescription": "一个用于思源笔记的插件，包含基本结构和配置",
     "license": "MIT"
   },
- "template": {
+ "templateFiles": {
     "README.md": {
       "args": ["name", "description"]
     },
