@@ -5,3 +5,4 @@ dist
 build
 cookie.txt
 token.txt
+__pycache__
