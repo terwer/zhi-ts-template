@@ -21,7 +21,7 @@
       "args": ["pkgName", "description", "githubAuthor", "license"]
     },
     "plugin.json": {
-      "args": ["pkgName", "name", "description", "githubAuthor", "license"]
+      "args": ["pkgName", "name", "zhName", "description", "zhDescription", "githubAuthor", "license"]
     },
     "src/index.ts": {
       "args": ["pkgName", "className", "lowerClassName", "githubAuthor", "description"]
